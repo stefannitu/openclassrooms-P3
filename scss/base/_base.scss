@@ -1,0 +1,36 @@
+@use '../utils/variables';
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: variables.$text-font;
+    scroll-behavior: smooth;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+}
+h1{
+    font-family: variables.$titles-font;
+}
+a,a:visited{
+    text-decoration: none;    
+}
+ul{
+    list-style: none;
+}
+h1{
+    font-family: variables.$titles-font;
+}
+/* for voiceover */
+ul li::before {
+    content: "\200B";
+}
+footer{
+    margin-top:auto;
+}

@@ -1,0 +1,28 @@
+@use '../utils/variables';
+
+header{
+    height: max(7vh,100px);    
+    width: 100vw; 
+    box-shadow: variables.$box-shadow;
+    display: grid;
+    place-items: center;    
+       .#{&}__logo{
+            width: 250px;
+            height:auto;
+        } 
+}
+footer{
+    background-color: black;
+    padding: 20px;
+    svg{
+        fill:white;
+        margin: 20px 0;
+    }
+    a{
+        color:white;
+        line-height: 1.7;
+    }
+    i{
+        margin-right: 10px;
+    }
+}
