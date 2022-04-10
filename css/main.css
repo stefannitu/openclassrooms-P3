@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* start of _base*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* for voiceover */
+ul li::before {
+  content: "​";
+}
+
+/* start of _base*/
+.restaurant__name {
+  font-family: "Shrikhand", cursive;
+}
+
+footer {
+  margin-top: auto;
+  background-color: black;
+  padding: 20px;
+}
+footer svg {
+  fill: white;
+  margin: 20px 0;
+}
+footer a {
+  color: white;
+  line-height: 1.7;
+}
+footer i {
+  margin-right: 10px;
+}
+
+.button-CTA {
+  padding: 15px 30px;
+  margin: 0 auto 30px auto;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+
+.page-header {
+  height: max(7vh, 100px);
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.page-header__logo {
+  grid-column: 2/3;
+  width: 90%;
+  max-width: 400px;
+}
+
+.page-header {
+  height: max(7vh, 100px);
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.page-header__logo {
+  grid-column: 2/3;
+  width: 90%;
+  max-width: 400px;
+}
+
+.page-main .section-booking {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.page-main .section-booking #search-form {
+  background-color: rgb(232, 229, 229);
+  padding: 15px 0;
+}
+.page-main .section-booking #search-form__input {
+  margin-left: 10px;
+  width: 25ch;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border-width: 0 0 3px 0;
+  text-align: center;
+}
+.page-main .section-booking #search-form__input:focus {
+  border-width: 0 0 3px 0;
+  outline: 0;
+}
+.page-main .section-booking__title {
+  padding: 15px;
+}
+.page-main .section-booking__description {
+  margin: 30px auto;
+  font-size: 1.2rem;
+  width: 30ch;
+}
+.page-main .section-about {
+  margin: auto;
+}
+.page-main .section-about__title {
+  padding: 15px;
+}
+.page-main .section-about__row {
+  margin: 15px auto;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  padding: 25px 30px;
+  background-color: #f2f2f2;
+  border: 0;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.page-main .section-about__row .number {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: -5px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #9356DC;
+}
+.page-main .section-restaurants {
+  background-color: #f2f2f2;
+}
+.page-main .section-restaurants__title {
+  padding: 15px;
+}
+.page-main .section-restaurants__gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px 20px;
+}
+.page-main .section-restaurants .card {
+  background-color: white;
+  border-radius: 20px;
+  height: 270px;
+  min-width: 335px;
+  max-width: 400px;
+  flex-basis: 380px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.page-main .section-restaurants .card__link::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: 3;
+}
+.page-main .section-restaurants .card__header {
+  height: 70%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.page-main .section-restaurants .card__footer {
+  padding: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+.page-main .section-restaurants .card__footer i {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  z-index: 4;
+  transition: all 1s;
+}
+.page-main .section-restaurants .card__footer i:hover {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to left, #9356DC, #FF79DA);
+}
+.page-main .section-restaurants .card:nth-child(1)::after, .page-main .section-restaurants .card:nth-child(2)::after {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  content: "New";
+  z-index: 2;
+  color: green;
+  background-color: #b3ffb3;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.page-main .section-restaurants .card:nth-child(1) .card__header {
+  background-image: url(/assets/restaurants/full-palette.jpg);
+}
+.page-main .section-restaurants .card:nth-child(2) .card__header {
+  background-image: url(/assets/restaurants/enchanted-plate.jpg);
+}
+.page-main .section-restaurants .card:nth-child(3) .card__header {
+  background-image: url(/assets/restaurants/bastille.jpg);
+}
+.page-main .section-restaurants .card:nth-child(4) .card__header {
+  background-image: url(/assets/restaurants/le-gourmand.jpg);
+}
+
+/*# sourceMappingURL=main.css.map */

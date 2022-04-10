@@ -1,5 +1,7 @@
 @use '../utils/variables';
 
+/* start of _base*/
+
 *{
     margin:0;
     padding: 0;
@@ -13,10 +15,7 @@ body{
     scroll-behavior: smooth;
     display:flex;
     flex-direction: column;
-    height:100%;
-}
-h1{
-    font-family: variables.$titles-font;
+    height:100%;  
 }
 a,a:visited{
     text-decoration: none;    
@@ -24,13 +23,31 @@ a,a:visited{
 ul{
     list-style: none;
 }
-h1{
-    font-family: variables.$titles-font;
-}
 /* for voiceover */
 ul li::before {
     content: "\200B";
 }
-footer{
-    margin-top:auto;
+
+/* start of _base*/
+.restaurant__name{
+    font-family: variables.$titles-font;
+}
+
+
+footer{ 
+    margin-top:auto;   
+    background-color: black;
+    padding: 20px;
+    svg{
+        fill:white;
+        margin: 20px 0;
+        // font-size: 1rem;
+    }
+    a{
+        color:white;
+        line-height: 1.7;
+    }
+    i{
+        margin-right: 10px;
+    }
 }

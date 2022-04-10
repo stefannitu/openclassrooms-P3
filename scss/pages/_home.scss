@@ -1,28 +1,156 @@
-@use '../utils/variables';
+@use '../utils';
 
-header{
+// Start of _home
+
+.page-header{
     height: max(7vh,100px);    
-    width: 100vw; 
-    box-shadow: variables.$box-shadow;
-    display: grid;
-    place-items: center;    
-       .#{&}__logo{
-            width: 250px;
-            height:auto;
-        } 
-}
-footer{
-    background-color: black;
+    width: 100%; 
+    box-shadow: utils.$box-shadow;    
     padding: 20px;
-    svg{
-        fill:white;
-        margin: 20px 0;
-    }
-    a{
-        color:white;
-        line-height: 1.7;
-    }
-    i{
-        margin-right: 10px;
+    position: relative; 
+    display: grid;
+    place-items: center;
+    grid-template-columns:1fr 2fr 1fr;
+    &__logo{
+        grid-column:2/3 ;
+        width: 90%;
+        max-width: 400px;
     }
 }
+
+.page-main{
+    .section-booking{    
+        text-align: center;
+        background-color: lighten(lightgray,12%);
+        #search-form{
+            background-color: rgb(232, 229, 229);
+            padding: 15px 0;
+            &__input{
+                margin-left: 10px;
+                width: 25ch; 
+                font-size: 1.2rem;
+                background-color: transparent;
+                border-width:0 0 3px 0;
+                text-align: center;
+                &:focus{
+                    border-width:0 0 3px 0;
+                    outline: 0;
+                }
+            }
+        }
+        &__title{
+            padding: 15px;
+        }
+        &__description{
+            margin:30px auto;        
+            font-size: 1.2rem; 
+            width: 30ch;
+        }    
+    }
+    .section-about{
+        margin:auto;
+        &__title{
+            padding: 15px;
+        }        
+        &__row{
+            margin:15px auto;
+            width: 350px;
+            border:1px solid black;
+            border-radius: 20px;
+            display: flex;
+            gap:20px;
+            padding: 25px 30px;
+            background-color: lighten(lightgray,12%);
+            border:0;
+            position: relative;
+            font-weight: bold;
+            font-size: 1.1rem;
+            .number{
+                position: absolute;
+                margin-left: -40px;
+                margin-top:-5px;
+                padding: 5px 10px;
+                border-radius: 50%;
+                background-color: utils.$primary-color;
+            }
+        }
+    }
+
+    .section-restaurants{
+        background-color: lighten(lightgray,12%);
+        &__title{
+            padding: 15px;
+        }
+        &__gallery{
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;   
+            gap:10px;    
+            padding:5px 20px;
+        }
+        .card{
+            background-color: white;
+            border-radius:20px;
+            height: 270px;
+            min-width: 335px;
+            max-width: 400px;
+            flex-basis: 380px;
+            overflow: hidden;
+            margin-top:10px;
+            margin-bottom:10px;
+            position: relative;
+            &__link::after{
+                position: absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right: 0;
+                content: '';
+                z-index: 3;
+            }
+            &__header{
+                height: 70%;
+                width: 100%;
+                background-position: center;
+                background-size:cover;
+            }            
+            &__footer{
+                padding: 15px;
+                position: relative;
+                line-height: 1.4;
+                i{
+                    position: absolute;
+                    top:20px;
+                    right: 30px;
+                    font-size: 1.5rem;
+                    z-index: 4;
+                    transition: all 1s;
+                }
+                i:hover{
+                    color:transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);
+                    
+                } 
+            }   
+            &:nth-child(1)::after,
+            &:nth-child(2)::after{
+                position: absolute;
+                top:20px;
+                right: 10px;
+                content: 'New';
+                z-index: 2;
+                color: green;
+                background-color: lighten(green,60%);
+                padding: 10px 15px;
+                border-radius: 5px;                
+            }      
+            @include utils.card_pic;            
+        }
+    }
+}
+
+
+
+// END of _home

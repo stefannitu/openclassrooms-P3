@@ -1,6 +1,8 @@
 
-@use './base/base';
-@use './pages/pages';
+@forward './base/base';
+@forward './components';
+@forward './layout';
+@forward './pages';
 
 
 

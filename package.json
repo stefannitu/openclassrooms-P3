@@ -4,7 +4,7 @@
   "description": "GitHub Pages link</br> [stefannitu.github.io/openclassrooms-P3](https://stefannitu.github.io/openclassrooms-P3)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./css/style.css",
+    "sass": "sass --watch ./scss/main.scss:./css/main.css",
     "sassv": "sass --version"
   },
   "author": "",

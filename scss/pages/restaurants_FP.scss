@@ -1,7 +1,35 @@
-@use '../utils/variables';
+@use '../utils';
 
-
-
-.sectionx{
-    background-color: blue;
+.page-header{
+    &__btn-back{    
+        grid-column: 1/2;
+        border: 1px solid black;
+    .fa-arrow-left{
+        font-size: 3rem;
+    }
+    }
 }
+.page-main{
+    margin:auto;
+    width:900px;
+    .hero{
+        max-width: 1000px;
+        min-width: 350px;
+        height: 40vh;
+        margin: auto;
+        background-image: url('/assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+        background-position: bottom;
+        background-size: cover;
+        
+    }  
+    .restaurant{
+        transform:translateY(-50px);
+        background-color:lighten(lightgray,12%);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        text-align: center;
+        
+        // position: relative;
+    }
+}
+

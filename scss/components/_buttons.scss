@@ -1,0 +1,11 @@
+@use '../utils';
+
+.button-CTA{  //could be a component
+    padding: 15px 30px;
+    margin:0 auto 30px auto;
+    border-radius: 30px;
+    color:white;
+    font-weight: bold;
+    border:0;
+    background-image: linear-gradient(to bottom right,utils.$secondary-color,utils.$primary-color );
+}

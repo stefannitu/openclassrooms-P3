@@ -1,0 +1,16 @@
+@mixin card_pic{
+    $pic-folder:'/assets/restaurants/';
+    $pictures:(1:"/assets/restaurants/full-palette.jpg",
+                2:"/assets/restaurants/enchanted-plate.jpg",
+                3:"/assets/restaurants/bastille.jpg",
+                4:"/assets/restaurants/le-gourmand.jpg");  
+
+
+    @each $key,$pic in $pictures{
+        &:nth-child(#{$key}) {
+            .card__header{
+            background-image: url(#{$pic});
+            }
+        }
+    }
+}
