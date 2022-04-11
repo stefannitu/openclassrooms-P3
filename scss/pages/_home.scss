@@ -2,22 +2,6 @@
 
 // Start of _home
 
-.page-header{
-    height: max(7vh,100px);    
-    width: 100%; 
-    box-shadow: utils.$box-shadow;    
-    padding: 20px;
-    position: relative; 
-    display: grid;
-    place-items: center;
-    grid-template-columns:1fr 2fr 1fr;
-    &__logo{
-        grid-column:2/3 ;
-        width: 90%;
-        max-width: 400px;
-    }
-}
-
 .page-main{
     .section-booking{    
         text-align: center;

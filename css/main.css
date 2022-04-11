@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* start of _base*/
 * {
   margin: 0;
@@ -27,10 +26,6 @@ ul {
 }
 
 /* for voiceover */
-ul li::before {
-  content: "​";
-}
-
 /* start of _base*/
 .restaurant__name {
   font-family: "Shrikhand", cursive;
@@ -78,21 +73,12 @@ footer i {
   width: 90%;
   max-width: 400px;
 }
-
-.page-header {
-  height: max(7vh, 100px);
-  width: 100%;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 2fr 1fr;
+.page-header__btn-back {
+  grid-column: 1/2;
 }
-.page-header__logo {
-  grid-column: 2/3;
-  width: 90%;
-  max-width: 400px;
+.page-header__btn-back .fa-arrow-left {
+  font-size: 3rem;
+  color: black;
 }
 
 .page-main .section-booking {
@@ -232,6 +218,99 @@ footer i {
 }
 .page-main .section-restaurants .card:nth-child(4) .card__header {
   background-image: url(/assets/restaurants/le-gourmand.jpg);
+}
+
+.page-main {
+  margin: auto;
+  width: 1000px;
+}
+.page-main .hero {
+  height: 40vh;
+  background-image: url("/assets/restaurants/full-palette.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+.page-main .restaurant {
+  transform: translateY(-5%);
+  background-color: #f2f2f2;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 30px;
+}
+.page-main .menu__title {
+  position: relative;
+  padding: 10px 0;
+}
+.page-main .menu__title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid green;
+}
+.page-main .menu__list .menu__item {
+  display: flex;
+  width: 400px;
+  height: 80px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.page-main .menu__list .menu__item-description {
+  overflow: hidden;
+}
+.page-main .menu__list .menu__item-name {
+  font-size: 1.2rem;
+  margin: 15px;
+}
+.page-main .menu__list .menu__item-ingredients {
+  margin: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.page-main .menu__list .menu__item-price {
+  align-self: flex-end;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: auto;
+}
+.page-main .menu__list .menu__item .menu__item-approved {
+  display: grid;
+  place-items: center;
+  width: 0;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  height: 100%;
+  background-color: aqua;
+  transition: width 1s;
+}
+.page-main .menu__list .menu__item:hover .menu__item-approved {
+  width: 100px;
+}
+
+.test {
+  display: flex;
+  overflow: hidden;
+  width: 400px;
+  justify-content: space-between;
+}
+.test .approved {
+  overflow: hidden;
+  text-align: center;
+  width: 0;
+  background-color: aqua;
+  transition: width 1s;
+}
+.test:hover .approved {
+  width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */

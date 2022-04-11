@@ -14,4 +14,12 @@
         width: 90%;
         max-width: 400px;
     }
+    &__btn-back{    
+        grid-column: 1/2;
+    .fa-arrow-left{
+        font-size: 3rem;
+        color: black;
+    }
+    }
 }
+
