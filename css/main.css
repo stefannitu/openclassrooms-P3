@@ -1,20 +1,12 @@
-/* start of _base*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 a, a:visited {
@@ -25,32 +17,14 @@ ul {
   list-style: none;
 }
 
-/* for voiceover */
-/* start of _base*/
 .restaurant__name {
   font-family: "Shrikhand", cursive;
 }
 
-footer {
-  margin-top: auto;
-  background-color: black;
-  padding: 20px;
-}
-footer svg {
-  fill: white;
-  margin: 20px 0;
-}
-footer a {
-  color: white;
-  line-height: 1.7;
-}
-footer i {
-  margin-right: 10px;
-}
-
 .button-CTA {
+  display: block;
   padding: 15px 30px;
-  margin: 0 auto 30px auto;
+  margin: auto;
   border-radius: 30px;
   color: white;
   font-weight: bold;
@@ -70,20 +44,37 @@ footer i {
 }
 .page-header__logo {
   grid-column: 2/3;
-  width: 90%;
+  width: 200px;
   max-width: 400px;
 }
 .page-header__btn-back {
   grid-column: 1/2;
 }
 .page-header__btn-back .fa-arrow-left {
-  font-size: 3rem;
+  font-size: 2rem;
   color: black;
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+}
+footer svg {
+  fill: white;
+  margin: 20px 0;
+}
+footer a {
+  color: white;
+  line-height: 1.7;
+}
+footer i {
+  margin-right: 10px;
 }
 
 .page-main .section-booking {
   text-align: center;
   background-color: #f2f2f2;
+  padding-bottom: 30px;
 }
 .page-main .section-booking #search-form {
   background-color: rgb(232, 229, 229);
@@ -208,24 +199,21 @@ footer i {
   border-radius: 5px;
 }
 .page-main .section-restaurants .card:nth-child(1) .card__header {
-  background-image: url(/assets/restaurants/full-palette.jpg);
+  background-image: url(../assets/restaurants/full-palette.jpg);
 }
 .page-main .section-restaurants .card:nth-child(2) .card__header {
-  background-image: url(/assets/restaurants/enchanted-plate.jpg);
+  background-image: url(../assets/restaurants/enchanted-plate.jpg);
 }
 .page-main .section-restaurants .card:nth-child(3) .card__header {
-  background-image: url(/assets/restaurants/bastille.jpg);
+  background-image: url(../assets/restaurants/bastille.jpg);
 }
 .page-main .section-restaurants .card:nth-child(4) .card__header {
-  background-image: url(/assets/restaurants/le-gourmand.jpg);
+  background-image: url(../assets/restaurants/le-gourmand.jpg);
 }
 
-.page-main {
-  margin: auto;
-  width: 1000px;
-}
 .page-main .hero {
   height: 40vh;
+  min-height: 300px;
   background-image: url("/assets/restaurants/full-palette.jpg");
   background-position: bottom;
   background-size: cover;
@@ -237,9 +225,15 @@ footer i {
   border-top-right-radius: 50px;
   padding: 30px;
 }
+.page-main .restaurant__header {
+  display: flex;
+  justify-content: space-between;
+}
 .page-main .menu__title {
   position: relative;
   padding: 10px 0;
+  opacity: 0;
+  animation: menu_fade 0.5s ease-in 1s forwards;
 }
 .page-main .menu__title::before {
   position: absolute;
@@ -252,14 +246,17 @@ footer i {
 }
 .page-main .menu__list .menu__item {
   display: flex;
-  width: 400px;
+  max-width: 450px;
+  flex-grow: 1;
   height: 80px;
   background-color: white;
   border-radius: 20px;
-  margin: 10px;
+  margin: 10px auto;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  opacity: 0;
+  animation: menu_fade 0.5s ease-in 1.1s forwards;
 }
 .page-main .menu__list .menu__item-description {
   overflow: hidden;
@@ -290,27 +287,26 @@ footer i {
   font-size: 1.4rem;
   height: 100%;
   background-color: aqua;
-  transition: width 1s;
+  transition: all 0.5s;
 }
 .page-main .menu__list .menu__item:hover .menu__item-approved {
   width: 100px;
 }
+.page-main .menu__list .menu__item i {
+  transition: transform 0.4s;
+}
+.page-main .menu__list .menu__item:hover i {
+  transform: rotate(360deg);
+}
 
-.test {
-  display: flex;
-  overflow: hidden;
-  width: 400px;
-  justify-content: space-between;
-}
-.test .approved {
-  overflow: hidden;
-  text-align: center;
-  width: 0;
-  background-color: aqua;
-  transition: width 1s;
-}
-.test:hover .approved {
-  width: 50%;
+@keyframes menu_fade {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

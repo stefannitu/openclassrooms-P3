@@ -11,13 +11,13 @@
     grid-template-columns:1fr 2fr 1fr;
     &__logo{
         grid-column:2/3 ;
-        width: 90%;
+        width: 200px;
         max-width: 400px;
     }
     &__btn-back{    
         grid-column: 1/2;
     .fa-arrow-left{
-        font-size: 3rem;
+        font-size: 2rem;
         color: black;
     }
     }

@@ -1,8 +1,9 @@
 @use '../utils';
 
 .button-CTA{  //could be a component
+    display: block;
     padding: 15px 30px;
-    margin:0 auto 30px auto;
+    margin: auto;
     border-radius: 30px;
     color:white;
     font-weight: bold;

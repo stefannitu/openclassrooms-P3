@@ -1,13 +1,9 @@
 @use '../utils';
 
-.page-main{
-    margin:auto;
-    width:1000px;
+.page-main{  
     .hero{
-        // max-width: 1000px;
-        // min-width: 350px;
         height: 40vh;
-        // margin: auto;
+        min-height: 300px;
         background-image: url('/assets/restaurants/full-palette.jpg');
         background-position: bottom;
         background-size: cover;
@@ -18,15 +14,18 @@
         background-color:lighten(lightgray,12%);
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        // text-align: center;
-        padding: 30px;
-        
-        // position: relative;
+        padding: 30px;  
+        &__header{
+            display: flex;
+            justify-content: space-between;
+        }
     }
-    .menu{
-        &__title{
+    .menu{            
+        &__title{         
             position: relative;
             padding: 10px 0;
+            opacity: 0;
+            animation: menu_fade 0.5s ease-in 1s forwards;
             &::before{
                 position: absolute;
                 content:'';
@@ -37,17 +36,20 @@
                 border-bottom: 3px solid green;;
             }
         }
-        &__list{
+        &__list{             
             .menu__item{
-                display: flex;
-                width: 400px;
+                display: flex;               
+                max-width: 450px;
+                flex-grow: 1;
                 height: 80px;
                 background-color: white;
                 border-radius: 20px;
-                margin:10px;
+                margin:10px auto;
                 align-items: center;
                 justify-content: space-between;
                 overflow: hidden;
+                opacity: 0;
+                animation: menu_fade 0.5s ease-in 1.1s forwards;
                 &-description{
                     overflow: hidden;
                 }
@@ -57,7 +59,6 @@
                 }
                 &-ingredients{   
                     margin: 15px;  
-                    // max-width: 250px;           
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
@@ -67,7 +68,6 @@
                     margin-bottom:15px;
                     margin-right: 15px;
                     margin-left:auto;
-                    // border: 1px solid black;
                 }
                 .menu__item-approved{
                     display: grid;
@@ -79,30 +79,31 @@
                     font-size: 1.4rem;
                     height: 100%;
                     background-color: aqua;
-                    transition:width 1s;                  
+                    transition:all 0.5s;                  
                 }
             &:hover .menu__item-approved{
-                width:100px;
+                width:100px; 
             }
+            & i{                
+                transition: transform 0.4s;               
+            }
+            &:hover i{                
+                transform:rotate(360deg);               
+            }
+            
             }
         }
     }
 }
 
-.test{
-    display:flex;
-    overflow: hidden;
-    width: 400px;
-    justify-content: space-between;
 
-    .approved{  
-        overflow: hidden; 
-        text-align: center;
-        width: 0;
-        background-color: aqua;
-        transition: width 1s;
+@keyframes menu_fade {
+    from{
+        transform:translateY(20px);
+        // opacity: 0;
     }
-    &:hover .approved{
-        width: 50%;
+    to{
+        transform:translateY(0);
+        opacity: 100;
     }
 }
