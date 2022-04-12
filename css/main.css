@@ -1,12 +1,8 @@
+/* BASE-reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
 }
 
 a, a:visited {
@@ -17,10 +13,19 @@ ul {
   list-style: none;
 }
 
+/* end-BASE-reset */
+/* BASE-typography */
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
 .restaurant__name {
   font-family: "Shrikhand", cursive;
 }
 
+/* end-BASE-typography */
+/* COMPONENTS-buttons */
 .button-CTA {
   display: block;
   padding: 15px 30px;
@@ -32,6 +37,8 @@ ul {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
+/* end-COMPONENTS-buttons */
+/* LAYOUT-header */
 .page-header {
   height: max(7vh, 100px);
   width: 100%;
@@ -55,6 +62,8 @@ ul {
   color: black;
 }
 
+/* end-LAYOUT-header */
+/* LAYOUT-footer */
 footer {
   background-color: black;
   padding: 20px;
@@ -71,6 +80,8 @@ footer i {
   margin-right: 10px;
 }
 
+/* end-LAYOUT-footer */
+/* PAGES-home */
 .page-main .section-booking {
   text-align: center;
   background-color: #f2f2f2;
@@ -179,12 +190,16 @@ footer i {
   right: 30px;
   font-size: 1.5rem;
   z-index: 4;
-  transition: all 1s;
+  transition: all 2s;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 .page-main .section-restaurants .card__footer i:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0;
   background-image: linear-gradient(to left, #9356DC, #FF79DA);
 }
 .page-main .section-restaurants .card:nth-child(1)::after, .page-main .section-restaurants .card:nth-child(2)::after {
@@ -211,6 +226,8 @@ footer i {
   background-image: url(../assets/restaurants/le-gourmand.jpg);
 }
 
+/* end-PAGES-home */
+/* PAGES-restaurants-Full-Palette*/
 .page-main .hero {
   height: 40vh;
   min-height: 300px;
@@ -308,5 +325,20 @@ footer i {
     opacity: 100;
   }
 }
+/* end-PAGES-restaurants-Full-Palette*/
+/* Table of contents
+---------------------
+
+--base
+--components
+--layout
+--pages
+
+---------------------
+*/
+/* base */
+/* components */
+/* layout */
+/* pages */
 
 /*# sourceMappingURL=main.css.map */

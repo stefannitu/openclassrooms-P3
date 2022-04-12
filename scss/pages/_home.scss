@@ -1,6 +1,6 @@
 @use '../utils';
 
-// Start of _home
+ /* PAGES-home */
 
 .page-main{
     .section-booking{    
@@ -109,14 +109,17 @@
                     right: 30px;
                     font-size: 1.5rem;
                     z-index: 4;
-                    transition: all 1s;
-                }
-                i:hover{
+                    transition: all 2s; 
+                    color:white;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: black;
+                }              
+                i:hover{                    
                     color:transparent;
                     background-clip: text;
                     -webkit-background-clip: text;
-                    background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);
-                    
+                    -webkit-text-stroke-width: 0;
+                    background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);                    
                 } 
             }   
             &:nth-child(1)::after,
@@ -136,6 +139,4 @@
     }
 }
 
-
-
-// END of _home
+/* end-PAGES-home */

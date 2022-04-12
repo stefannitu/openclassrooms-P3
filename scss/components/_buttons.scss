@@ -1,6 +1,8 @@
 @use '../utils';
 
-.button-CTA{  //could be a component
+/* COMPONENTS-buttons */
+
+.button-CTA{  
     display: block;
     padding: 15px 30px;
     margin: auto;
@@ -10,3 +12,4 @@
     border:0;
     background-image: linear-gradient(to bottom right,utils.$secondary-color,utils.$primary-color );
 }
+/* end-COMPONENTS-buttons */

@@ -1,0 +1,13 @@
+ @use '../utils';
+
+/* BASE-typography */
+
+body{
+    font-family: utils.$text-font;
+    scroll-behavior: smooth;  
+}
+.restaurant__name{
+    font-family: utils.$titles-font;
+}
+
+/* end-BASE-typography */

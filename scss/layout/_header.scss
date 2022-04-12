@@ -1,5 +1,7 @@
 @use '../utils';
 
+/* LAYOUT-header */
+
 .page-header{
     height: max(7vh,100px);    
     width: 100%; 
@@ -22,4 +24,5 @@
     }
     }
 }
+/* end-LAYOUT-header */
 

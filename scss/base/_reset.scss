@@ -1,5 +1,6 @@
 @use '../utils';
 
+/* BASE-reset */
 *{
     margin:0;
     padding: 0;
@@ -8,9 +9,7 @@
 html{
     // height: 100%;
 }
-body{
-    font-family: utils.$text-font;
-    scroll-behavior: smooth;
+body{    
     // display:flex;
     // flex-direction: column;
     // height:100%;  
@@ -22,8 +21,4 @@ ul{
     list-style: none;
 }
 
-.restaurant__name{
-    font-family: utils.$titles-font;
-}
-
-
+/* end-BASE-reset */
