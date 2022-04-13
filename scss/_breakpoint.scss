@@ -1,0 +1,56 @@
+@media screen and (min-width:768px){
+    .page-header{
+        &__logo{
+            width:300px;
+        }
+    }
+    .page-main{
+        max-width: 1000px;
+        margin:auto;
+        .hero{
+            min-height: 400px;
+        }
+        .menu__title{
+            padding:10px 100px;
+            &::before{
+                left: 100px;
+            }
+
+        }
+        .section-booking{
+            // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;;
+        }
+        .section-about{
+          &__list{
+              display:flex;
+              gap:20px;
+          }
+          &__row{
+              height: 150px;
+              align-items: center;
+              justify-content: center;
+              padding: 2px;
+            //   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              .number{
+                  top:-15px;
+                  color:white;
+              }
+              i{
+                  font-size: 1.4rem;;
+              }
+          }
+
+        }
+        .section-restaurants{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;           
+        }
+    }
+    .page-footer{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap:250px;
+    }
+}
