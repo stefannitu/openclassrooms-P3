@@ -16,7 +16,7 @@
         background-color:lighten(lightgray,12%);
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        padding: 50px;  
+        padding: 5%;  
         &__header{
             display: flex;
             justify-content: space-between;
@@ -75,6 +75,8 @@
                 &-name{
                     font-size: 1.2rem;
                     margin: 15px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
                 &-ingredients{   
                     margin: 10px;  

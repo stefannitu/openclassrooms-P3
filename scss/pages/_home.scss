@@ -154,16 +154,17 @@
                     right: 30px;
                     font-size: 1.5rem;
                     z-index: 4;
-                    transition: all 0.5s ease-out;
+                    transition: all 1s ease-out;
                     color:white;
                     -webkit-text-stroke-width: 2px;
                     -webkit-text-stroke-color: black;
                 }              
-                i:hover{                    
+                i:hover{ 
                     color:transparent;
                     background-clip: text;
+                    -webkit-text-stroke-width: 2px;
                     -webkit-background-clip: text;
-                    -webkit-text-stroke-color: white;
+                    -webkit-text-stroke-color: rgb(245, 162, 252);
                     background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);                    
                 } 
             }   
