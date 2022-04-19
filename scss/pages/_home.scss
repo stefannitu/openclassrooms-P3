@@ -78,26 +78,24 @@
         }        
         &__row{
             margin:15px auto;
-            width: 350px;
-            border:1px solid black;
+            width: 340px;
             border-radius: 20px;
             display: flex;
             gap:20px;
             padding: 25px 30px;
             background-color: lighten(lightgray,12%);
-            border:0;
             position: relative;
             font-weight: bold;
             font-size: 1.1rem;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             &--selected{
                 background-color: lighten(utils.$primary-color,30%);
-                color:darken(utils.$primary-color,20%);
+                color:darken(utils.$primary-color,20%);                
             }
             .number{
                 position: absolute;
-                margin-left: -40px;
-                margin-top:-5px;
+                left: -15px;
+                top:20px;
                 padding: 5px 10px;
                 border-radius: 50%;
                 background-color: utils.$primary-color;
@@ -154,16 +152,17 @@
                     right: 30px;
                     font-size: 1.5rem;
                     z-index: 4;
-                    transition: all 0.5s ease-out;
+                    transition: all 1s ease-out;
                     color:white;
                     -webkit-text-stroke-width: 2px;
                     -webkit-text-stroke-color: black;
                 }              
-                i:hover{                    
+                i:hover{ 
                     color:transparent;
                     background-clip: text;
+                    -webkit-text-stroke-width: 2px;
                     -webkit-background-clip: text;
-                    -webkit-text-stroke-color: white;
+                    -webkit-text-stroke-color: rgb(245, 162, 252);
                     background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);                    
                 } 
             }   
