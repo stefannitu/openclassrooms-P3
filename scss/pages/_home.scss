@@ -7,16 +7,16 @@
    width: 100vw;
    display: grid;
    place-items: center;
-   background-color: red;
+   background-color:white;
    z-index: 5;  
    opacity: 100; 
    animation:loader 5s ease-in-out 1s forwards;
    &__circle{
        position: relative;
-       width: 400px;
-       height: 400px;
-       background:linear-gradient(to top right, green,yellow);
-       border-radius: 60%;
+       width: 300px;
+       height: 300px;
+    //    background:linear-gradient(to top right, green,yellow);
+       border-radius: 50%;
        display: grid;
        place-items: center;
        &::before{
