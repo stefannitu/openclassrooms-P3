@@ -61,8 +61,11 @@
 }
 @media screen and (min-width:992px){
     .page-main{
-        max-width: 972px;
+        max-width: 1200px;
         margin:auto;
+        .restaurant__name{
+            font-size: 2.2rem;
+        }
         .section-restaurants__gallery{
             justify-content: space-around;
         }
@@ -71,5 +74,28 @@
                 left:140px;
             }
         }
+        .menu{
+            &__title{
+                font-size: 1.6rem;
+            }
+            &__list{
+                .menu__item{
+                    max-width: 550px; 
+                    height: 140px;  
+                    &-name{
+                        font-size: 1.6rem;
+                        // letter-spacing: 1.2rem;
+                    }  
+                    &-ingredients{
+                        font-size: 1.4rem;
+                    }    
+                    &-price{
+                        font-size: 1.4rem;
+                        margin-bottom: 30px;
+                    }                          
+                }
+                
+             }
+         }
     }
 }

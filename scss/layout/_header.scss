@@ -10,7 +10,7 @@
     position: relative; 
     display: grid;
     place-items: center;
-    grid-template-columns:1fr 2fr 1fr;
+    grid-template-columns:1fr 2fr 1fr;   
     &__logo{
         grid-column:2/3 ;
         width: 200px;

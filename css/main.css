@@ -5,12 +5,8 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 a, a:visited {
@@ -48,6 +44,12 @@ body {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.5s;
+}
+@media (min-width: 992px) {
+  .button-CTA {
+    font-size: 1.6rem;
+    padding: 30px 70px;
+  }
 }
 .button-CTA:hover {
   transform: scale(1.1);
@@ -153,9 +155,17 @@ footer i {
   border-width: 0 0 3px 0;
   text-align: center;
 }
+@media (min-width: 992px) {
+  .page-main .section-booking #search-form__input {
+    font-size: 1.8rem;
+  }
+}
 .page-main .section-booking #search-form__input:focus {
   border-width: 0 0 3px 0;
   outline: 0;
+}
+.page-main .section-booking #search-form i {
+  font-size: 1.6rem;
 }
 .page-main .section-booking__title {
   padding: 15px;
@@ -183,10 +193,19 @@ footer i {
   font-weight: bold;
   font-size: 1.1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s;
+}
+.page-main .section-about__row:hover {
+  transform: scale(1.05);
+  background-color: #e5e5e5;
 }
 .page-main .section-about__row--selected {
   background-color: #e4d5f6;
   color: #6023a9;
+}
+.page-main .section-about__row--selected:hover {
+  transform: scale(1.05);
+  background-color: #dfccf5;
 }
 .page-main .section-about__row .number {
   position: absolute;
@@ -214,13 +233,18 @@ footer i {
   border-radius: 20px;
   height: 270px;
   min-width: 335px;
-  max-width: 400px;
-  flex-basis: 380px;
+  max-width: 450px;
+  flex-basis: 420px;
+  flex-grow: 1;
   overflow: hidden;
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.5s;
+}
+.page-main .section-restaurants .card:hover {
+  transform: scale(1.05);
 }
 .page-main .section-restaurants .card__link::after {
   position: absolute;
@@ -255,10 +279,10 @@ footer i {
 }
 .page-main .section-restaurants .card__footer i:hover {
   color: transparent;
-  background-clip: text;
   -webkit-text-stroke-width: 2px;
   -webkit-background-clip: text;
   -webkit-text-stroke-color: rgb(245, 162, 252);
+  background-clip: text;
   background-image: linear-gradient(to left, #9356DC, #FF79DA);
 }
 .page-main .section-restaurants .card:nth-child(1)::after, .page-main .section-restaurants .card:nth-child(2)::after {
@@ -331,6 +355,7 @@ footer i {
   padding: 10px 0;
   opacity: 0;
   animation: menu_fade 0.5s ease-in 0.3s forwards;
+  font-size: 1.2rem;
 }
 .page-main .menu__title::before {
   position: absolute;
@@ -480,14 +505,34 @@ footer i {
 }
 @media screen and (min-width: 992px) {
   .page-main {
-    max-width: 972px;
+    max-width: 1200px;
     margin: auto;
+  }
+  .page-main .restaurant__name {
+    font-size: 2.2rem;
   }
   .page-main .section-restaurants__gallery {
     justify-content: space-around;
   }
   .page-main .section-about__row .number {
     left: 140px;
+  }
+  .page-main .menu__title {
+    font-size: 1.6rem;
+  }
+  .page-main .menu__list .menu__item {
+    max-width: 550px;
+    height: 140px;
+  }
+  .page-main .menu__list .menu__item-name {
+    font-size: 1.6rem;
+  }
+  .page-main .menu__list .menu__item-ingredients {
+    font-size: 1.4rem;
+  }
+  .page-main .menu__list .menu__item-price {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
   }
 }
 /* Table of contents

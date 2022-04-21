@@ -31,6 +31,7 @@
             padding: 10px 0;
             opacity: 0;
             animation: menu_fade 0.5s ease-in 0.3s forwards;
+            font-size: 1.2rem;
            
             &::before{
                 position: absolute;
@@ -45,7 +46,7 @@
         &__list{             
             .menu__item{
                 display: flex;               
-                max-width: 450px;
+                max-width: 450px;                
                 flex-grow: 1;
                 height: 80px;
                 background-color: white;
@@ -57,6 +58,7 @@
                 opacity: 0;
                 animation: menu_fade 0.5s ease-in forwards;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                
                 &:nth-child(1){
                     animation: menu_fade 0.5s ease-in forwards;
                     animation-delay: 0.3s;
@@ -74,11 +76,13 @@
                 }
                 &-name{
                     font-size: 1.2rem;
+                    // font-size: 1.4rem;
                     margin: 15px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                 }
                 &-ingredients{   
+                    // font-size: 1.3rem;
                     margin: 10px;  
                     text-overflow: ellipsis;
                     overflow: hidden;
