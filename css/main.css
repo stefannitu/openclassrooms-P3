@@ -297,16 +297,16 @@ footer i {
   border-radius: 5px;
 }
 .page-main .section-restaurants .card:nth-child(1) .card__header {
-  background-image: url(../assets/restaurants/full-palette.jpg);
+  background-image: url(../assets/restaurants/full-palette.webp);
 }
 .page-main .section-restaurants .card:nth-child(2) .card__header {
-  background-image: url(../assets/restaurants/enchanted-plate.jpg);
+  background-image: url(../assets/restaurants/enchanted-plate.webp);
 }
 .page-main .section-restaurants .card:nth-child(3) .card__header {
-  background-image: url(../assets/restaurants/bastille.jpg);
+  background-image: url(../assets/restaurants/bastille.webp);
 }
 .page-main .section-restaurants .card:nth-child(4) .card__header {
-  background-image: url(../assets/restaurants/le-gourmand.jpg);
+  background-image: url(../assets/restaurants/le-gourmand.webp);
 }
 
 /* end-PAGES-home */
@@ -332,9 +332,20 @@ footer i {
 .page-main .hero {
   height: 40vh;
   min-height: 300px;
-  background-image: url("../assets/restaurants/full-palette.jpg");
   background-position: bottom;
   background-size: cover;
+}
+.page-main .FP {
+  background-image: url(../assets/restaurants/full-palette.webp);
+}
+.page-main .EP {
+  background-image: url(../assets/restaurants/enchanted-plate.webp);
+}
+.page-main .bastille {
+  background-image: url(../assets/restaurants/bastille.webp);
+}
+.page-main .gourmand {
+  background-image: url(../assets/restaurants/le-gourmand.webp);
 }
 .page-main .restaurant {
   transform: translateY(-5%);

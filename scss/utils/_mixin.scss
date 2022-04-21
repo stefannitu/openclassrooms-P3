@@ -1,8 +1,8 @@
 @mixin card_pic{
-    $pictures:(1:"../assets/restaurants/full-palette.jpg",
-                2:"../assets/restaurants/enchanted-plate.jpg",
-                3:"../assets/restaurants/bastille.jpg",
-                4:"../assets/restaurants/le-gourmand.jpg");  
+    $pictures:(1:"../assets/restaurants/full-palette.webp",
+                2:"../assets/restaurants/enchanted-plate.webp",
+                3:"../assets/restaurants/bastille.webp",
+                4:"../assets/restaurants/le-gourmand.webp");  
 
 
     @each $key,$pic in $pictures{
@@ -13,3 +13,18 @@
         }
     }
 }
+
+@mixin bkg_pic{
+    $pictures:(FP:"../assets/restaurants/full-palette.webp",
+                EP:"../assets/restaurants/enchanted-plate.webp",
+                bastille:"../assets/restaurants/bastille.webp",
+                gourmand:"../assets/restaurants/le-gourmand.webp");  
+
+
+    @each $key,$pic in $pictures{
+        .#{$key} {
+            background-image: url(#{$pic});
+            }
+        }
+}
+

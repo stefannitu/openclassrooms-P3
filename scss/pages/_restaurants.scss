@@ -6,11 +6,10 @@
     .hero{
         height: 40vh;
         min-height: 300px;
-        background-image: url('../assets/restaurants/full-palette.jpg');
         background-position: bottom;
-        background-size: cover;
-        
+        background-size: cover;        
     }  
+    @include utils.bkg_pic;
     .restaurant{
         transform:translateY(-5%);
         background-color:lighten(lightgray,12%);
