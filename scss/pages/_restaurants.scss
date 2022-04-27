@@ -20,9 +20,22 @@
             display: flex;
             justify-content: space-between;
         }
-        i{
+        .like-button{
             font-size: 1.5rem;
+            margin:20px 10px 0 0;
+            color:lighten(lightgray,12%);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            transition: all 1s ease-out;
         }
+        .like-button:hover{ 
+            color:transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-background-clip: text;
+            -webkit-text-stroke-color: rgb(245, 162, 252);
+            background-clip: text;
+            background-image: linear-gradient(to left,utils.$primary-color,utils.$secondary-color);                    
+        } 
     }
     .menu{            
         &__title{         
